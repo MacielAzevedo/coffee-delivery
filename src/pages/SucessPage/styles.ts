@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../layouts/DefaultLayout/styles";
 
 export const SucessPageContainer = styled.div`
   display: flex;
@@ -10,10 +11,22 @@ export const SucessPageContainer = styled.div`
     color: ${({ theme }) => theme.colors["yellow-dark"]};
   }
 
+  @media ${device.mobileS} {
+    margin-top: 1rem;
+  }
+
   > section {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media ${device.mobileS} {
+      flex-direction: column;
+      img {
+        max-width: 100%;
+        margin: 2rem 0;
+      }
+    }
   }
 `;
 
@@ -34,5 +47,10 @@ export const SucessDetailsContainer = styled.div`
     z-index: -1;
     border-radius: 7px 37px 7px 37px;
     background: linear-gradient(102.89deg, #dbac2c 2.61%, #8047f8 98.76%);
+  }
+
+  @media ${device.mobileS} {
+    min-width: 0;
+    padding: 1.5rem;
   }
 `;

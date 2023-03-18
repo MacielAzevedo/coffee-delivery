@@ -1,9 +1,17 @@
 import styled from "styled-components";
+import { device } from "../../layouts/DefaultLayout/styles";
 
 export const BenefitsItemContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 0.75rem;
+
+  @media ${device.mobileS} {
+    max-width: 425px;
+    p {
+      text-align: left;
+    }
+  }
 `;
 
 interface IconContainerProps {

@@ -1,4 +1,4 @@
-import { BannerContainer, BannerContent, BannerTitle, BeneftisListContainer } from "./styles"
+import { BannerContainer, BannerContent, BannerTitle, BeneftisListContainer, LeftContainer, RightContainer } from "./styles"
 import bannerImage from '../../../../assets/banner-image.svg'
 import { RegularText } from "../../../../@helpers/Typograph"
 import { BenefitsListItem } from "../../../../components/BenefitsListItem"
@@ -11,7 +11,7 @@ export const Banner = () => {
     return (
         <BannerContainer>
             <BannerContent className="container">
-                <div>
+                <LeftContainer>
                     <section>
                         <BannerTitle size="xl">
                             Encontre o café perfeito para qualquer hora do dia
@@ -46,9 +46,12 @@ export const Banner = () => {
                             iconBg={colors.purple}
                         />
                     </BeneftisListContainer>
-                </div>
+                </LeftContainer>
 
-                <img src={bannerImage} alt="" />
+                <RightContainer>
+                    <img src={bannerImage} alt="" />
+                </RightContainer>
+
             </BannerContent>
         </BannerContainer>
     )

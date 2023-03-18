@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { device } from "../../layouts/DefaultLayout/styles";
 
 export const HeaderContainer = styled.header`
   height: 6.5rem;
@@ -16,6 +17,12 @@ export const HeaderButtonContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 0.75rem;
+
+  @media ${device.mobileS} {
+    > button {
+      display: none;
+    }
+  }
 `;
 
 interface HeaderButtonProps {

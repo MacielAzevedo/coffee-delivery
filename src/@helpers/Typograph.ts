@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../layouts/DefaultLayout/styles";
 
 interface TitleTextProps {
   size?: "xl" | "l" | "m" | "s" | "xs";
@@ -12,6 +13,11 @@ export const TitleText = styled.h1<TitleTextProps>`
   font-family: "Baloo 2", cursive;
   line-height: 130%;
   font-weight: ${({ weight }) => weight ?? 800};
+
+  @media ${device.mobileS} {
+    max-width: 425px;
+    text-align: center;
+  }
 `;
 
 interface RegularTextProps {
@@ -27,4 +33,9 @@ export const RegularText = styled.div<RegularTextProps>`
   font-family: "Roboto", sans-serif;
   line-height: 130%;
   font-weight: ${({ weight }) => weight ?? 400};
+
+  @media ${device.mobileS} {
+    max-width: 425px;
+    text-align: center;
+  }
 `;

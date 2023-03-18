@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../layouts/DefaultLayout/styles";
 
 export const InputStyleContainer = styled.input`
   height: 2.625rem;
