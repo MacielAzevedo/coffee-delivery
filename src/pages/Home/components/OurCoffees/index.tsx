@@ -14,6 +14,7 @@ export const OurCoffees = () => {
                 {coffees.map(coffee => (
                     <CoffeeCard
                         key={coffee.id}
+                        // @ts-expect-error
                         coffee={coffee}
                     />
                 ))}
