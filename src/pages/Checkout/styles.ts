@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../layouts/DefaultLayout/styles";
+import { size } from "../../layouts/DefaultLayout/styles";
 
 export const CheckoutContainer = styled.form`
   margin-top: 2.5rem;
@@ -7,7 +7,12 @@ export const CheckoutContainer = styled.form`
   justify-content: space-between;
   gap: 2rem;
 
-  @media ${device.mobileS} {
+  @media (max-width: ${size.mobileL}) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: ${size.tablet}) and (max-width: ${size.laptop}) {
     flex-direction: column;
     align-items: center;
   }
@@ -19,7 +24,7 @@ export const SectionBaseStyle = styled.div`
   border-radius: 6x;
   padding: 2.5rem;
 
-  @media ${device.mobileS} {
+  @media (max-width: ${size.mobileL}) {
     padding: 0%;
   }
 `;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../layouts/DefaultLayout/styles";
+import { size } from "../../layouts/DefaultLayout/styles";
 
 export const SucessPageContainer = styled.div`
   display: flex;
@@ -11,8 +11,17 @@ export const SucessPageContainer = styled.div`
     color: ${({ theme }) => theme.colors["yellow-dark"]};
   }
 
-  @media ${device.mobileS} {
+  @media (max-width: ${size.mobileL}) {
     margin-top: 1rem;
+    > div {
+      margin: 0 auto;
+    }
+  }
+  @media (min-width: ${size.tablet}) and (max-width: ${size.laptop}) {
+    margin-top: 1rem;
+    > div {
+      margin: 0 auto;
+    }
   }
 
   > section {
@@ -20,7 +29,7 @@ export const SucessPageContainer = styled.div`
     align-items: center;
     justify-content: space-between;
 
-    @media ${device.mobileS} {
+    @media (max-width: ${size.mobileL}) {
       flex-direction: column;
       img {
         max-width: 100%;
@@ -49,8 +58,13 @@ export const SucessDetailsContainer = styled.div`
     background: linear-gradient(102.89deg, #dbac2c 2.61%, #8047f8 98.76%);
   }
 
-  @media ${device.mobileS} {
+  @media (max-width: ${size.mobileL}) {
     min-width: 0;
+    padding: 1.5rem;
+  }
+
+  @media (min-width: ${size.tablet}) and (max-width: ${size.laptop}) {
+    min-width: 20rem;
     padding: 1.5rem;
   }
 `;

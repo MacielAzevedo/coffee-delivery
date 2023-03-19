@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { device } from "../../layouts/DefaultLayout/styles";
+import { size } from "../../layouts/DefaultLayout/styles";
 
 export const HeaderContainer = styled.header`
   height: 6.5rem;
@@ -11,6 +11,9 @@ export const HeaderContainer = styled.header`
   position: sticky;
   top: 0;
   left: 0;
+
+  @media (max-width: ${size.laptop}) {
+  }
 `;
 
 export const HeaderButtonContainer = styled.div`
@@ -18,7 +21,7 @@ export const HeaderButtonContainer = styled.div`
   align-items: center;
   gap: 0.75rem;
 
-  @media ${device.mobileS} {
+  @media (max-width: ${size.mobileL}) {
     > button {
       display: none;
     }

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../layouts/DefaultLayout/styles";
+import { size } from "../layouts/DefaultLayout/styles";
 
 interface TitleTextProps {
   size?: "xl" | "l" | "m" | "s" | "xs";
@@ -14,8 +14,11 @@ export const TitleText = styled.h1<TitleTextProps>`
   line-height: 130%;
   font-weight: ${({ weight }) => weight ?? 800};
 
-  @media ${device.mobileS} {
-    max-width: 425px;
+  @media (max-width: ${size.mobileL}) {
+    text-align: center;
+  }
+
+  @media (min-width: ${size.tablet}) and (max-width: ${size.laptop}) {
     text-align: center;
   }
 `;
@@ -34,8 +37,11 @@ export const RegularText = styled.div<RegularTextProps>`
   line-height: 130%;
   font-weight: ${({ weight }) => weight ?? 400};
 
-  @media ${device.mobileS} {
-    max-width: 425px;
+  @media (max-width: ${size.mobileL}) {
+    text-align: center;
+  }
+
+  @media (min-width: ${size.tablet}) and (max-width: ${size.laptop}) {
     text-align: center;
   }
 `;

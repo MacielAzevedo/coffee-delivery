@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../../../layouts/DefaultLayout/styles";
+import { size } from "../../../../layouts/DefaultLayout/styles";
 
 export const OurCoffeesContainer = styled.section`
   width: 100%;
@@ -15,7 +15,11 @@ export const CoffeeList = styled.div`
   row-gap: 2.5rem;
   margin-top: 3.5rem;
 
-  @media ${device.mobileS} {
+  @media (max-width: ${size.mobileL}) {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media (min-width: ${size.tablet}) and (max-width: ${size.laptop}) {
+    grid-template-columns: repeat(3, 1fr);
   }
 `;

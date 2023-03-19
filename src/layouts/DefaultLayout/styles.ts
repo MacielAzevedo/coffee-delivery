@@ -1,20 +1,10 @@
 import styled from "styled-components";
 
-const size = {
-  mobileS: "320px",
-  mobileM: "375px",
-  mobileL: "425px",
+export const size = {
+  mobileL: "450px",
   tablet: "768px",
   laptop: "1024px",
-};
-
-export const device = {
-  mobileS: `(min-width: ${size.mobileS})`,
-  mobileM: `(min-width: ${size.mobileM})`,
-  mobileL: `(min-width: ${size.mobileL})`,
-  tablet: `(min-width: ${size.laptop})`,
-  laptop: `(min-width: ${size.laptop})`,
-};
+} as const;
 
 export const LayoutContainer = styled.div`
   .container {
@@ -23,8 +13,12 @@ export const LayoutContainer = styled.div`
     margin-right: auto;
     margin-left: auto;
 
-    @media ${device.mobileS} {
+    @media (max-width: ${size.mobileL}) {
       padding: 0 1rem;
+    }
+
+    @media (min-width: ${size.tablet}) and (max-width: ${size.laptop}) {
+      padding: 0 1.2rem;
     }
   }
 `;

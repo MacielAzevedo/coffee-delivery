@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { size } from "../../../../layouts/DefaultLayout/styles";
 
 export const CoffeeCartCardContainer = styled.div`
   width: 100%;
@@ -24,6 +25,15 @@ export const CoffeeCartCardContainer = styled.div`
   > p {
     font-weight: 700;
     align-self: flex-start;
+  }
+
+  @media (max-width: ${size.mobileL}) {
+    flex-direction: column;
+    p {
+      width: 100%;
+      text-align: center;
+      padding-top: 1rem;
+    }
   }
 `;
 

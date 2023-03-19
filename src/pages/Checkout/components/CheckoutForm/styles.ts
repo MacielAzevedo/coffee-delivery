@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../../../layouts/DefaultLayout/styles";
+import { size } from "../../../../layouts/DefaultLayout/styles";
 import { SectionBaseStyle } from "../../styles";
 
 export const CheckoutFormContainer = styled.div`
@@ -8,7 +8,7 @@ export const CheckoutFormContainer = styled.div`
   gap: 0.75rem;
   width: 40rem;
 
-  @media ${device.mobileS} {
+  @media (max-width: ${size.mobileL}) {
     width: 100%;
     gap: 2rem;
   }
@@ -41,7 +41,7 @@ export const AddressFormContainer = styled.div`
     grid-column: span 2;
   }
 
-  @media ${device.mobileS} {
+  @media (max-width: ${size.mobileL}) {
     display: flex;
     flex-direction: column;
     .cep {
@@ -59,7 +59,7 @@ export const PaymentMethodContainer = styled.div`
     color: ${({ theme }) => theme.colors["base-error"]};
   }
 
-  @media ${device.mobileS} {
+  @media (max-width: ${size.mobileL}) {
     display: flex;
     flex-direction: column;
   }

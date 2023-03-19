@@ -1,16 +1,20 @@
 import styled from "styled-components";
-import { device } from "../../layouts/DefaultLayout/styles";
+import { size } from "../../layouts/DefaultLayout/styles";
 
 export const BenefitsItemContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 0.75rem;
 
-  @media ${device.mobileS} {
+  @media (max-width: ${size.mobileL}) {
     max-width: 425px;
     p {
       text-align: left;
     }
+  }
+
+  @media (min-width: ${size.tablet}) and (max-width: ${size.laptop}) {
+    justify-content: center;
   }
 `;
 

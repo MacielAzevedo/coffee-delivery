@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { RegularText, TitleText } from "../../../../@helpers/Typograph";
-import { device } from "../../../../layouts/DefaultLayout/styles";
+import { size } from "../../../../layouts/DefaultLayout/styles";
 
 export const BannerContainer = styled.section`
   width: 100%;
@@ -10,7 +10,11 @@ export const BannerContainer = styled.section`
   align-items: center;
   justify-content: center;
 
-  @media ${device.mobileS} {
+  @media (max-width: ${size.mobileL}) {
+    height: 100%;
+  }
+
+  @media (min-width: ${size.tablet}) and (max-width: ${size.laptop}) {
     height: 100%;
   }
 `;
@@ -21,7 +25,12 @@ export const BannerContent = styled.div`
   justify-content: space-between;
   gap: 3.5rem;
 
-  @media ${device.mobileS} {
+  @media (max-width: ${size.mobileL}) {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  @media (min-width: ${size.tablet}) and (max-width: ${size.laptop}) {
     height: 100%;
     flex-direction: column;
   }
@@ -34,7 +43,7 @@ export const LeftContainer = styled.div`
 `;
 
 export const RightContainer = styled.div`
-  @media ${device.mobileS} {
+  @media (max-width: ${size.mobileL}) {
     img {
       width: 100%;
     }
@@ -52,7 +61,7 @@ export const BeneftisListContainer = styled(RegularText)`
   row-gap: 1.25rem;
   margin-top: 4.125rem;
 
-  @media ${device.mobileS} {
+  @media (max-width: ${size.mobileL}) {
     grid-template-columns: 1fr;
   }
 `;
